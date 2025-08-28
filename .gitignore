@@ -1,66 +1,67 @@
-# gitignore template for ecu.test workspaces - by tracetronic https://tracetronic.com
-# website: https://www.ecu-test.com
-#   * all directories are related to the default directories, please adapt the .gitignore if you use customized directories
+### Python standard ignores ###
+# __pycache__/
+# *.py[cod]
+# *$py.class
 
-# Dynamic workspace settings
-#   * We don't recommend to ignore the .workspace directory, because of important 
-#     * project specific settings
-#     * local user settings
-.workspace/ETdrive.xml
-.workspace/favorites.xml
-.workspace/filters.xml
-.workspace/generators.xml
-.workspace/history.xml
-.workspace/parallelExecution.xml
-.workspace/signalviewer.xml
-.workspace/signalViewerHistory.json
-.workspace/signalviewer2layout.xml
-.workspace/testeditor.xml
-.workspace/tooladapter.xml
-.workspace/view.xml
-# optional, if your process depends on this file remove exclusion
-.workspace/attributeLists.xml
-.workspace/interactiveexecution.xml
-.workspace/protocol.xml
-.workspace/pythonlibrary.xml
-# deprecated, support for older versions
-.workspace/traceexplorer.xml
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
 
-# Custom file formats and test dependencies
-#  * you can manage your artifacts also with test.guide (https://www.test-guide.info) and reference them via Playbooks
-*.arxml
-*.a2l
-*.dbc
-*.hex
-*.s19
-[tT]estdata
-[tT]estdaten
+# Virtual environment folders
+.venv/
+venv/
+env/
+ENV/
 
-# Test results and test execution related content
-#   * Git is not intended to store and provide test results for all iterations
-#   * We recommend to use test.guide (https://www.test-guide.info) for the test report management
-TestReports
+# Environment / secrets
+.env
+.env.*
 
-# Report generators and templates
-#   * if you want to provide (f.e.) your own report generators exclude the directory here and ignore only the unnecessary subdirectories
-Templates
+# IDE / editor
+.vscode/
+.idea/
+*.code-workspace
 
-# optional, default for external Python libraries
-PyLibs
+# OS files
+Thumbs.db
+.DS_Store
 
-# Exclude large binary artifacts
-#  * you can manage your artifacts also with test.guide (https://www.test-guide.info) and reference them via Playbooks
-Offline-FIUs
-Offline-Models
-Offline-SGBDs
-*.exe
-*.msi
-*.zip
-*.7z
+# Logs / cache
+*.log
+.pytest_cache/
+profile_default/
 
-# Exclude default and custom temporary directories
-Backup_*
+# Coverage
+htmlcov/
+.coverage*
 
-# Python bytecode and cache files
-__pycache__/
-*.py[cod]
+# Jupyter
+*.ipynb_checkpoints
+
+# Optional: comment these out if you actually want to commit notebooks outputs later
+# *.ipynb
+
+# Byte-compiled C extensions
+*.so
+
+# MyPy / type checker
+.mypy_cache/
+
+# Ruff / lint cache
+.ruff_cache/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Backup files
+*~
+*.bak
+*.swp
+
+# If you want to specifically keep a file previously unignored use !pattern
+# Example: !Maazo_clinic.py
+# *.py
+Maazo_clinic.py
