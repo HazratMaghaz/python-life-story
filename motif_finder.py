@@ -13,4 +13,4 @@ for m in sequence_1:
         print("No Motifs founds")
 
 
-print("The Process is been added")        
+print("The Process is been added there")        
