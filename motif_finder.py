@@ -13,4 +13,4 @@ for m in sequence_1:
         print("No Motifs founds")
 
 
-print("The P")        
+print("The Process is ")        
