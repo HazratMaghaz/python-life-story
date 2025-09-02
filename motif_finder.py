@@ -11,3 +11,6 @@ for m in sequence_1:
         break
     else:
         print("No Motifs founds")
+
+
+print()        
