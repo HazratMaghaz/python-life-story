@@ -13,6 +13,6 @@ for m in sequence_1:
         print("No Motifs founds")
 
 
-print("The Process is been added there")        
+# print("The Process is been added there")        
 
 print("The process is get completed sucessfully ")
